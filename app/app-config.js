@@ -1,16 +1,15 @@
 requirejs.config({
-	//urlArgs: Date.now(),
+    //urlArgs: Date.now(),
 
-	paths: {
-		// directory aliases
-		components: '../components',
-        vendor: '../vendor',
-        angular: '../bower_components/angular/angular'
-	},
+    paths: {
+        // directory aliases
+        components: '../components',
+        angular: '../vendor/angular/angular'
+    },
 
-	shim: {
-      angular: {
-        exports: 'angular'
-      }
-	}
+    shim: {
+        angular: {
+            exports: 'angular'
+        }
+    }
 })(['app']);
