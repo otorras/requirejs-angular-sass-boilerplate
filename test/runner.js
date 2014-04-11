@@ -2,32 +2,31 @@
 'use strict';
 
 requirejs.config({
-	// This is because karma puts files under base/ directory
-	baseUrl: '/base/app',
+    // This is because karma puts files under base/ directory
+    baseUrl: '/base/app',
 
-	urlArgs: Date.now(),
+    urlArgs: Date.now(),
 
-	paths: {
-		'component': '../components',
-		'chai': 'bower_components/chai/chai',
-		'sinon': 'lib/sinon-1.7.3',
-	},
+    paths: {
+        'component': '../components',
+        'chai': 'vendor/chai/chai',
+        'sinon': 'lib/sinon-1.7.3',
+    },
 
-	shim: {
-		'sinon': { exports: 'sinon' }
-	}
+    shim: {
+        'sinon': { exports: 'sinon' }
+    }
 });
 
 (function() {
+    var files = Object.keys(window.__karma__.files);
 
-	var files = Object.keys(window.__karma__.files);
+    var deps = files.filter(function(filename) {
+        return filename.indexOf('.test.js') !== -1;
+    });
+    console.log(deps);
 
-	var deps = files.filter(function(filename) {
-		return filename.indexOf('.test.js') !== -1;
-	});
-	console.log(deps);
-
-	requirejs(deps, function() {
-		window.__karma__.start();
-	});
+    requirejs(deps, function() {
+        window.__karma__.start();
+    });
 })();

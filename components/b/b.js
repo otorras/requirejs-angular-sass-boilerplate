@@ -1,9 +1,9 @@
 define(function(require) {
-	'use strict';
+    'use strict';
 
-//    require('angular-module');
+    //require('angular-module');
     var angular = require('angular');
-  
-	return angular.module('module-b', [])
-      .value('world', 'World!');
+
+    return angular.module('module-b', [])
+        .value('world', 'World!');
 });

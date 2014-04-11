@@ -1,8 +1,8 @@
 define(function(require) {
-	'use strict';
-	require('component/b/b');
+    'use strict';
+    require('component/b/b');
 
-	describe('blabla', function() {
-		it('bleble', function() { });
-	});
+    describe('blabla', function() {
+        it('bleble', function() { });
+    });
 });
