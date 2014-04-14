@@ -4,9 +4,6 @@
     "authors": [
         "Oriol Torras <uri.torras@gmail.com>"
     ],
-    "moduleType": [
-        "amd"
-    ],
     "private": true,
     "dependencies": {
         "angular": "~1.2.16",
