@@ -4,6 +4,20 @@ angular + requirejs + sass
 Installation
 ------------
 
-  ```npm install```
+### 1. Install NPM dependencies
+```
+npm install
+```
 
-  ```bower install```
+### 2. Install global dependencies
+```
+npm install -g bower
+npm install -g gulp
+npm install -g karma
+```
+
+### 3. Install bower dependencies
+```
+bower install
+```
+
